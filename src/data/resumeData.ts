@@ -115,8 +115,8 @@ export const resumeData: ResumeDataInterface = {
 	skills: {
 		programmingLanguages: ['HTML5', 'CSS3', 'JavaScript', 'PHP'],
 		libraryFramework: ['TailwindCSS', 'Bootstrap', 'ReactJS', 'React Native', 'WordPress', 'jQuery', 'Sass'],
-		data: ['MySQL'],
-		tools: [],
+	data: ['MySQL'],
+		tools: ['Git', 'Visual Studio Code', 'Laragon', 'Tabby'],
 		design: ['Figma'],
 	},
 	projects: [
