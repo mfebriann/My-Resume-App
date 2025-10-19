@@ -61,24 +61,14 @@ export const resumeData: ResumeDataInterface = {
 			company: 'PT Kreasi Potensi Indonesia',
 			duration: 'May 2025 - Current',
 			location: 'Jakarta, Indonesia',
-			responsibilities: [
-				'Make website company profile',
-				'Make website about agency',
-				'Maintenance company profile website',
-			],
+			responsibilities: ['Make website company profile', 'Make website about agency', 'Maintenance company profile website'],
 		},
 		{
 			title: 'Web Developer',
 			company: 'XRUN Metaverse Indonesia',
 			duration: 'September 2022-May 2025',
 			location: 'Pantai Indah Kapuk, West Jakarta',
-			responsibilities: [
-				'Make website company profile',
-				'Make layouting games with Unreal Engine 5',
-				'Make Metahint App',
-				'Make XRUN App',
-				'Make Afterlife App',
-			],
+			responsibilities: ['Make website company profile', 'Make layouting games with Unreal Engine 5', 'Make Metahint App', 'Make XRUN App', 'Make Afterlife App'],
 		},
 		{
 			title: 'Volunteer Frontend Developer',
@@ -113,17 +103,16 @@ export const resumeData: ResumeDataInterface = {
 		major: 'Computer and Network Engineering who learn about network systems and learn about programming',
 	},
 	skills: {
-		programmingLanguages: ['HTML5', 'CSS3', 'JavaScript', 'PHP'],
+		programmingLanguages: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'PHP'],
 		libraryFramework: ['TailwindCSS', 'Bootstrap', 'ReactJS', 'React Native', 'WordPress', 'jQuery', 'Sass'],
-	data: ['MySQL'],
+		data: ['MySQL'],
 		tools: ['Git', 'Visual Studio Code', 'Laragon', 'Tabby'],
 		design: ['Figma'],
 	},
 	projects: [
 		{
 			name: 'Sopwerhos',
-			description:
-				'Company profile website built with modern Next.js stack. Showcasing services, clean design, and responsive layout optimized for businesses in Indonesia.',
+			description: 'Company profile website built with modern Next.js stack. Showcasing services, clean design, and responsive layout optimized for businesses in Indonesia.',
 		},
 		{
 			name: 'Gemilang Taruna',
