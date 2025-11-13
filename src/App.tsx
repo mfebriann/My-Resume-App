@@ -1,9 +1,25 @@
 import { resumeData } from './data/resumeData';
 
+type SkillItem = {
+	name: string;
+	level: string;
+};
+
+const SkillList = ({ items }: { items: SkillItem[] }) => (
+	<ul className="space-y-1 text-sm text-gray-700">
+		{items.map((item) => (
+			<li key={item.name} className="flex items-center justify-between gap-2">
+				<span>{item.name}</span>
+				<span className="text-xs font-semibold uppercase tracking-wide text-gray-500">{item.level}</span>
+			</li>
+		))}
+	</ul>
+);
+
 const App: React.FC = () => {
 	return (
 		<div className="min-h-screen bg-white p-6 font-sans max-w-6xl mx-auto">
-			<header className="mb-8">
+			<header>
 				<h1 className="text-4xl font-bold text-sky-600 mb-2">{resumeData.name}</h1>
 				<p className="text-xl text-gray-700 mb-4">{resumeData.title}</p>
 				<div className="flex flex-wrap items-center gap-4 text-gray-600">
@@ -55,6 +71,7 @@ const App: React.FC = () => {
 					</div>
 				</div>
 			</header>
+			<p className="text-gray-700 my-5">{resumeData.description}</p>
 
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 				<div className="md:col-span-2 space-y-8">
@@ -84,13 +101,34 @@ const App: React.FC = () => {
 
 					<section>
 						<h2 className="text-2xl font-semibold text-sky-600 border-b-2 border-sky-600 pb-2 mb-6">Education</h2>
-						<div>
-							<h3 className="text-lg font-semibold text-gray-800">{resumeData.education.school}</h3>
-							<p className="text-gray-600 text-sm mb-2">
-								{resumeData.education.duration} // {resumeData.education.location}
-							</p>
-							<p className="text-gray-700">{resumeData.education.major}</p>
+						<div className="flex flex-col gap-y-6">
+							{resumeData.education.map((data) => {
+								return (
+									<div key={data.school}>
+										<h3 className="text-lg font-semibold text-gray-800">{data.school}</h3>
+										<p className="text-gray-600 text-sm mb-2">
+											{data.duration} // {data.location}
+										</p>
+										<p className="text-gray-700">{data.major}</p>
+									</div>
+								);
+							})}
 						</div>
+					</section>
+					<section>
+						<h2 className="text-2xl font-semibold text-sky-600 border-b-2 border-sky-600 pb-2 mb-6">Languages</h2>
+						<ul className="space-y-1 text-gray-700 text-sm">
+							{resumeData.languages.map((language) => (
+								<li key={language.name} className="flex items-center justify-between">
+									<span>{language.name}</span>
+									<span className="uppercase text-xs font-semibold tracking-wide text-gray-500">{language.level}</span>
+								</li>
+							))}
+						</ul>
+					</section>
+					<section>
+						<h2 className="text-2xl font-semibold text-sky-600 border-b-2 border-sky-600 pb-2 mb-6">Hobbies</h2>
+						<p className="text-gray-700">{resumeData.interests.join(', ')}</p>
 					</section>
 				</div>
 
@@ -100,23 +138,27 @@ const App: React.FC = () => {
 						<div className="space-y-4">
 							<div>
 								<h3 className="font-semibold text-gray-800 mb-2">Programming Languages</h3>
-								<p className="text-gray-700 text-sm">{resumeData.skills.programmingLanguages.join(', ')}</p>
+								<SkillList items={resumeData.skills.programmingLanguages} />
+							</div>
+							<div>
+								<h3 className="font-semibold text-gray-800 mb-2">Runtime Environment</h3>
+								<SkillList items={resumeData.skills.runtimeEnvironment} />
 							</div>
 							<div>
 								<h3 className="font-semibold text-gray-800 mb-2">Library & Framework</h3>
-								<p className="text-gray-700 text-sm">{resumeData.skills.libraryFramework.join(', ')}</p>
+								<SkillList items={resumeData.skills.libraryFramework} />
 							</div>
 							<div>
 								<h3 className="font-semibold text-gray-800 mb-2">Data</h3>
-								<p className="text-gray-700 text-sm">{resumeData.skills.data.join(', ')}</p>
+								<SkillList items={resumeData.skills.data} />
 							</div>
 							<div>
 								<h3 className="font-semibold text-gray-800 mb-2">Tools</h3>
-								<p className="text-gray-700 text-sm">{resumeData.skills.tools.join(', ')}</p>
+								<SkillList items={resumeData.skills.tools} />
 							</div>
 							<div>
 								<h3 className="font-semibold text-gray-800 mb-2">Design</h3>
-								<p className="text-gray-700 text-sm">{resumeData.skills.design.join(', ')}</p>
+								<SkillList items={resumeData.skills.design} />
 							</div>
 						</div>
 					</section>
@@ -128,14 +170,23 @@ const App: React.FC = () => {
 								<div key={index}>
 									<h3 className="font-semibold text-gray-800 mb-1">{project.name}</h3>
 									<p className="text-gray-700 text-sm">{project.description}</p>
+									{(project.previewUrl || project.repoUrl) && (
+										<div className="flex flex-col gap-1 mt-2 text-sm">
+											{project.previewUrl && (
+												<a href={project.previewUrl} target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">
+													{project.previewUrl}
+												</a>
+											)}
+											{project.repoUrl && (
+												<a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline break-all">
+													{project.repoUrl}
+												</a>
+											)}
+										</div>
+									)}
 								</div>
 							))}
 						</div>
-					</section>
-
-					<section>
-						<h2 className="text-2xl font-semibold text-sky-600 border-b-2 border-sky-600 pb-2 mb-6">Interests</h2>
-						<p className="text-gray-700">{resumeData.interests.join(', ')}</p>
 					</section>
 				</div>
 			</div>
