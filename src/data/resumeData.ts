@@ -95,6 +95,7 @@ export const resumeData: ResumeDataInterface = {
 				'Developed mobile applications using React Native with NodeJS as backend for XRUN and MetaHint.',
 				'Built the XRUN mobile app, an AR-based crypto token hunting app using React Native, Google Maps API, and NodeJS backend.',
 				'Developed the MetaHint crypto wallet app for managing MetaHint tokens, released on Google Play Store.',
+				'Created the MetaHint website using ReactJS and NodeJS as the backend.',
 				'Worked on the Afterlife AI communication app using Speech-to-Text, ChatGPT, and ElevenLabs (backend not yet implemented).',
 				'Created UI systems in Unreal Engine using Blueprint for metaverse-related features and internal prototypes.',
 			],
@@ -173,18 +174,42 @@ export const resumeData: ResumeDataInterface = {
 		{
 			name: 'Gemilang Taruna',
 			description:
-				'A modern website for Gemilang Taruna, a local food stall established in 2023. It showcases the brands identity, menu offerings, and story with a clean design. Key features include a responsive layout, product gallery, and contact section, making it easy for customers to explore the menu and connect with the business.',
+				'A modern website for Gemilang Taruna, a local food stall established in 2023, built with Next.js, TypeScript, and TailwindCSS, featuring a clean responsive design that showcases the brand identity, menu offerings, product gallery, and contact section for easy customer engagement.',
 			previewUrl: 'https://gemilang-taruna-website.vercel.app/',
 			repoUrl: 'https://github.com/mfebriann/GemilangTaruna_Website',
 		},
 		{
 			name: 'MCKY Studio Labs',
 			description:
-				"A creative studio dedicated to developing original games. Focus on strong storytelling and striking visuals, believing that games can convey extraordinary messages, emotions, and experiences. The game includes 'Echoes Of Paur' and 'PARMAN'.",
+				'A creative studio dedicated to developing original games—focusing on strong storytelling and striking visuals—built with ReactJS, TypeScript, and TailwindCSS, featuring titles such as Echoes of Paur and PARMAN that aim to deliver powerful messages, emotions, and unforgettable experiences.',
 			previewUrl: 'https://www.mckystudiolabs.com/',
 		},
+		{
+			name: 'Youtz Media',
+			description:
+				'YoutzMedia is a digital media platform that delivers articles, information, and educational content through a modern and accessible interface. The website is built using Laravel and TailwindCSS, developed in collaboration with a backend team to ensure a fast, stable, and well-structured system.',
+			previewUrl: 'https://youtzmedia.id/',
+		},
+		{
+			name: 'FYP Media',
+			description:
+				'FYP Media is a digital media platform offering articles, news, and educational content through a clean and user-friendly interface. The website is built using Laravel and TailwindCSS, developed in collaboration with a backend team to ensure performance, structure, and reliability.',
+			previewUrl: 'https://fypmedia.id/',
+		},
+		{
+			name: 'MARS Law Firm',
+			description:
+				'Mars Law Firm Office is a law-firm website presenting its services, firm profile and contact information in a professional layout. The site is built using Laravel and TailwindCSS, developed in collaboration with a backend team for a robust, well-structured, and responsive system.',
+			previewUrl: 'https://marslawfirmoffice.com/',
+		},
+		{
+			name: 'Harly Law',
+			description:
+				'A law-firm website built on WordPress with custom HTML, CSS, and JavaScript, presenting the firm’s brand identity, services, team, articles, gallery, and contact information in a clean and professional layout for clients and visitors.',
+			previewUrl: 'https://harlylaw.com/',
+		},
 	],
-	interests: ['Playing Game', 'Football', 'Chess'],
+	interests: ['Playing Game', 'Football', 'Chess', 'Learning New Technology'],
 	languages: [
 		{ name: 'Indonesian', level: 'Native' },
 		{ name: 'English', level: 'Pre-Intermediate' },
