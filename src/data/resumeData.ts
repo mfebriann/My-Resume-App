@@ -86,8 +86,8 @@ export const resumeData: ResumeDataInterface = {
 			],
 		},
 		{
-			title: 'Web Developer',
-			company: 'XRUN Metaverse Indonesia',
+			title: 'Fullstack Web & Mobile Developer',
+			company: 'PT XRUN Metaverse Indonesia',
 			duration: 'September 2022 - May 2025',
 			location: 'Pantai Indah Kapuk, West Jakarta',
 			responsibilities: [
@@ -99,6 +99,13 @@ export const resumeData: ResumeDataInterface = {
 				'Worked on the Afterlife AI communication app using Speech-to-Text, ChatGPT, and ElevenLabs (backend not yet implemented).',
 				'Created UI systems in Unreal Engine using Blueprint for metaverse-related features and internal prototypes.',
 			],
+		},
+		{
+			title: 'WordPress Developer',
+			company: 'Zalepik Studio',
+			duration: 'August 2022 - September 2022',
+			location: 'WFA',
+			responsibilities: ['Slicing design from Figma', 'Create a display for a medical buying and selling website WordPress, and custom HTML, CSS and JavaScript'],
 		},
 		{
 			title: 'Volunteer Frontend Developer',
