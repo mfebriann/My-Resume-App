@@ -149,6 +149,7 @@ export const resumeData: ResumeDataInterface = {
 			{ name: 'TailwindCSS', level: 'Intermediate' },
 			{ name: 'Bootstrap', level: 'Intermediate' },
 			{ name: 'ReactJS', level: 'Intermediate' },
+			{ name: 'NextJS', level: 'Intermediate' },
 			{ name: 'React Native', level: 'Intermediate' },
 			{ name: 'WordPress', level: 'Intermediate' },
 			{ name: 'Laravel', level: 'Basic' },
